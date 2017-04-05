@@ -103,3 +103,5 @@ NOTE: sum of tests that ran (it's 1018 in java)
 
 NOTE: how many tests failed!   
 ```SUM=0; for i in `grep "Tests run:" test_results.txt | sed 's/.*Failures: //'`; do SUM=$(($SUM + $i)); done; echo $SUM```   
+
+NOTE: that seems to be 797 success and 35 fail which is 832 tests, original was 1018 tests, why are 186 tests missing! (and note we have 89 test classes as objc vs java 91?)   
