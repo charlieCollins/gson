@@ -100,3 +100,6 @@ NOTE: how many original java tests are there and how many objc tests there are f
 
 NOTE: sum of tests that ran (it's 1018 in java)   
 ```SUM=0; for i in `grep "OK" test_results.txt | sed 's/OK (//' | sed 's/ test.*//'`; do SUM=$(($SUM + $i)); done; echo $SUM```   
+
+NOTE: how many tests failed!   
+```SUM=0; for i in `grep "Tests run:" test_results.txt | sed 's/.*Failures: //'`; do SUM=$(($SUM + $i)); done; echo $SUM```   
