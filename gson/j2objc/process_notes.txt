@@ -79,5 +79,10 @@ Time: 0.004
 
 OK (1 test)
 
-get all the "tests"
-find ./build_objc -name "*Test.m" | sed 's/.m$//' | sed 's/^.\/build_objc\//ComGoogleGson/'
+get all the top level "tests" from the interface files...
+find ./build_objc/*Test.h -exec grep -hw -m1 "$@interface" {} \; | sed 's/@interface//' | sed 's/ ().*//' | sed 's/ :.*//' > test_names.txt
+
+run them
+for i in `cat test_names.txt`; do ./gsonobjc org.junit.runner.JUnitCore $i; done
+
+for i in `cat test_names.txt`; do echo RUNNING: $i; ./gsonobjc org.junit.runner.JUnitCore $i; done

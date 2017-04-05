@@ -65,6 +65,7 @@
 ../src/main/java/com/google/gson/stream/MalformedJsonException.java
 ../src/main/java/com/google/gson/TypeAdapter.java
 ../src/main/java/com/google/gson/TypeAdapterFactory.java
+../src/test/java/com/google/gson/AllTests.java
 ../src/test/java/com/google/gson/CommentsTest.java
 ../src/test/java/com/google/gson/common/MoreAsserts.java
 ../src/test/java/com/google/gson/common/TestTypes.java
