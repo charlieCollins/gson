@@ -87,7 +87,7 @@ Detailed Process: GSON java to objc with tests
 
 Build Script   
 ------------   
-The (build.sh) script included here consolidates all of the above steps.   
+The [build.sh](build.sh) script included here consolidates all of the above steps.   
 If you have javac and j2objc, you can define the paths at the top of that script and it should complete the process and run the tests.   
 
 
