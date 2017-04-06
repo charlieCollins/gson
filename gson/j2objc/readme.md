@@ -85,6 +85,10 @@ Detailed Process: GSON java to objc with tests
 9. RUN the tests   
 ```for i in `cat test_names.txt`; do echo RUNNING: $i; ./gsonobjc org.junit.runner.JUnitCore $i; done```
 
+Build Script   
+------------   
+The [build.sh] script included here consolidates all of the above steps.   
+If you have javac and j2objc, you can define the paths at the top of that script and it should complete the process and run the tests.   
 
 
 Other Notes

@@ -47,7 +47,7 @@ $J2OBJCC -Wno-deprecated -ObjC -o gsonobjc -ljre_emul -ljunit $BUILD_DIR_OBJC/*.
 
 #run tests, optionally
 echo "Running JUNIT tests as ObjC code ..."
-echo "./gsonobjc OrgJunitRunnerJUnitCore ComGoogleGsonCommentsTest"
+echo "./gsonobjc OrgJunitRunnerJUnitCore <TEST_NAMES>"
 OBJC_TEST_NAMES="$(find $BUILD_DIR_OBJC/*Test.h -exec grep -hw -m1 "$@interface" {} \; | sed 's/@interface//' | sed 's/ ().*//' | sed 's/ :.*//')"
 #echo $OBJC_TEST_NAMES
 for i in $OBJC_TEST_NAMES; do echo RUNNING: $i; ./gsonobjc org.junit.runner.JUnitCore $i; done > $BUILD_DIR/test_output.txt
